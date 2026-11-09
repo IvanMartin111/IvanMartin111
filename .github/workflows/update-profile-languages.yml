@@ -1,4 +1,4 @@
-name: Update profile language statistics
+name: Update profile statistics
 
 on:
   push:
@@ -7,6 +7,7 @@ on:
     paths:
       - README.md
       - .github/workflows/update-profile-languages.yml
+      - scripts/generate_activity.py
   schedule:
     - cron: "23 6 * * *"
   workflow_dispatch:
@@ -15,7 +16,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: profile-language-statistics
+  group: profile-statistics
   cancel-in-progress: true
 
 jobs:
@@ -24,6 +25,9 @@ jobs:
     env:
       METRICS_TOKEN: ${{ secrets.METRICS_TOKEN }}
     steps:
+      - name: Check out profile repository
+        uses: actions/checkout@v4
+
       - name: Generate language statistics
         if: ${{ env.METRICS_TOKEN != '' }}
         uses: lowlighter/metrics@v3.34
@@ -46,23 +50,26 @@ jobs:
           extras_css: |
             .items-wrapper > section:first-child { display: none !important; }
             .column > small { display: none !important; }
+            .column h3.field { font-size: 1.25rem !important; }
           config_timezone: Europe/Madrid
 
-      - name: Generate contribution calendar
+      - name: Generate monthly authored commit chart
         if: ${{ env.METRICS_TOKEN != '' }}
-        uses: lowlighter/metrics@v3.34
-        with:
-          token: ${{ env.METRICS_TOKEN }}
-          committer_token: ${{ secrets.GITHUB_TOKEN }}
-          user: IvanMartin111
-          filename: assets/statistics/activity.svg
-          output_action: commit
-          committer_message: "Update contribution calendar - [Skip GitHub Action]"
-          base: ""
-          plugin_calendar: yes
-          plugin_calendar_limit: 1
-          config_timezone: Europe/Madrid
+        env:
+          METRICS_TOKEN: ${{ env.METRICS_TOKEN }}
+        run: python scripts/generate_activity.py
+
+      - name: Commit monthly commit chart
+        if: ${{ env.METRICS_TOKEN != '' }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/statistics/activity.svg
+          if ! git diff --cached --quiet; then
+            git commit -m "Update monthly commit chart - [Skip GitHub Action]"
+            git push
+          fi
 
       - name: Explain missing token
         if: ${{ env.METRICS_TOKEN == '' }}
-        run: echo "Set the METRICS_TOKEN repository secret to enable language statistics, including private repositories."
+        run: echo "Set the METRICS_TOKEN repository secret to enable language and monthly commit statistics, including private repositories."

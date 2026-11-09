@@ -21,9 +21,13 @@
 ## 📊 GitHub activity
 
 <p align="center">
-  <img src="./assets/statistics/activity.svg" alt="GitHub contribution calendar for the current year" width="49%">
+  <img src="./assets/statistics/activity.svg" alt="Monthly commits attributed to my GitHub account over the last 12 months" width="49%">
   <img src="./assets/statistics/languages.svg" alt="Most used languages in source changes authored across my own repositories and repositories I contribute to" width="49%">
 </p>
+
+<p align="center"><sub>Monthly counts aggregate commits attributed to my account across my own repositories and AbRaCD/RCD. Repository names are not displayed.</sub></p>
+
+[![Iván Martín Hernández profile views](https://u8views.com/api/v1/github/profiles/206348111/views/day-week-month-total-count.svg)](https://u8views.com/github/IvanMartin111)
 
 ---
 
@@ -52,7 +56,7 @@ Grootveld M, Leenarts E, von Stein I, et al. Workshop report “Training in the 
 
 ### Manuscript submitted
 
-Martín-Hernández I, Chacón P, López-Blanco JR. AbRaCD: Fast sampling-based prediction of antibody CDR loops. *Bioinformatics Advances*. 2026. Submitted. [AbRaCD project](https://github.com/chaconlab/AbRaCD).
+Martín-Hernández I, Chacón P, López-Blanco JR. AbRaCD: Fast sampling-based prediction of antibody CDR loops. *Bioinformatics Advances*. 2026. Submitted.
 
 ### Conferences & posters
 
