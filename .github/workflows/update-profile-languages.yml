@@ -48,7 +48,22 @@ jobs:
           extras_css: |
             .items-wrapper > section:first-child { display: none !important; }
             .column > small { display: none !important; }
-            .column h3.field { font-size: 1.25rem !important; }
+            .items-wrapper > .column { box-sizing: border-box; width: 100%; min-height: 390px; padding: 12px 16px; justify-content: space-between; }
+            .column h3.field { align-self: center; justify-content: center; text-align: center; font-size: 30px !important; }
+            .column svg.bar { width: 100%; height: 12px; margin: 0; }
+            .row.fill-width { width: 100%; flex-direction: column; flex-wrap: nowrap; }
+            .field.language.details { box-sizing: border-box; width: 100%; min-height: 56px; margin: 0; padding: 12px 4px; font-size: 26px; }
+            .field.language.details .field { font-size: 26px; }
+            .field.language.details .field svg { width: 20px; height: 20px; }
+            .field.language.details small { font-size: 24px; }
+          extras_js: |
+            const list = document.querySelector(".row.fill-width");
+            if (list) {
+              const languages = Array.from(list.querySelectorAll(".field.language.details"));
+              const percentage = (item) => Number.parseFloat(item.querySelector("small")?.textContent || "0") || 0;
+              languages.sort((a, b) => percentage(b) - percentage(a));
+              list.replaceChildren(...languages);
+            }
           config_timezone: Europe/Madrid
 
       - name: Copy generated language statistics

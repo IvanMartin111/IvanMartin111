@@ -120,20 +120,20 @@ def authored_commits(token: str, repositories: set[str], start: datetime, now: d
 
 
 def render_svg(months: list[tuple[int, int]], counts: Counter[tuple[int, int]]) -> str:
-    width, height = 480, 96
-    plot_left, plot_right = 28, 472
-    plot_top, plot_bottom = 36, 70
+    width, height = 720, 190
+    plot_left, plot_right = 30, 690
+    plot_top, plot_bottom = 78, 145
     plot_height = plot_bottom - plot_top
     slot_width = (plot_right - plot_left) / len(months)
-    bar_width = min(19.0, slot_width * 0.58)
+    bar_width = min(29.0, slot_width * 0.58)
     peak = max((counts[month] for month in months), default=0)
     scale_peak = max(peak, 1)
 
     parts = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">',
-        "<style>text{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;fill:#777}.title{font-size:15px;fill:#0366d6}.subtitle{font-size:10px}.month{font-size:9px}.value{font-size:9px}.grid{stroke:#8c959f;stroke-opacity:.24;stroke-width:1}.bar{fill:#167d8d}</style>",
-        '<text class="title" x="12" y="20">Monthly authored commits</text>',
-        '<text class="subtitle" x="468" y="19" text-anchor="end">Last 12 months</text>',
+        "<style>text{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;fill:#777}.title{font-size:23px;fill:#0366d6;font-weight:500}.subtitle{font-size:15px}.month{font-size:13px}.value{font-size:13px}.grid{stroke:#8c959f;stroke-opacity:.24;stroke-width:1}.bar{fill:#167d8d}</style>",
+        '<text class="title" x="360" y="30" text-anchor="middle">Monthly authored commits</text>',
+        '<text class="subtitle" x="360" y="54" text-anchor="middle">Last 12 months</text>',
     ]
 
     for fraction in (0, 0.5, 1):
@@ -148,13 +148,13 @@ def render_svg(months: list[tuple[int, int]], counts: Counter[tuple[int, int]]) 
         y = plot_bottom - bar_height
         if value:
             parts.append(f'<rect class="bar" x="{x:.1f}" y="{y:.1f}" width="{bar_width:.1f}" height="{bar_height:.1f}" rx="2"/>')
-            value_y = max(plot_top - 2, y - 3)
+            value_y = max(plot_top - 7, y - 5)
             parts.append(f'<text class="value" x="{center:.1f}" y="{value_y:.1f}" text-anchor="middle">{value}</text>')
         label = f"{MONTH_NAMES[month[1] - 1]} {str(month[0])[-2:]}"
-        parts.append(f'<text class="month" x="{center:.1f}" y="87" text-anchor="middle">{label}</text>')
+        parts.append(f'<text class="month" x="{center:.1f}" y="174" text-anchor="middle">{label}</text>')
 
     if peak == 0:
-        parts.append('<text class="subtitle" x="250" y="56" text-anchor="middle">No attributed commits found in this period</text>')
+        parts.append('<text class="subtitle" x="360" y="116" text-anchor="middle">No attributed commits found in this period</text>')
 
     parts.append("</svg>")
     return "\n".join(parts) + "\n"

@@ -21,11 +21,13 @@
 ## 📊 GitHub activity
 
 <p align="center">
-  <img src="./assets/statistics/activity.svg" alt="Monthly commits attributed to my GitHub account over the last 12 months" width="49%">
-  <img src="./assets/statistics/languages.svg" alt="Most used languages in source changes authored across my own repositories and repositories I contribute to" width="49%">
+  <img src="./assets/statistics/activity.svg" alt="Monthly commits attributed to my GitHub account over the last 12 months" width="74%">
+  <img src="./assets/statistics/languages.svg" alt="Most used languages in source changes authored across my own repositories and repositories I contribute to" width="24%">
 </p>
 
-[![Iván Martín Hernández profile views](https://u8views.com/api/v1/github/profiles/206348111/views/day-week-month-total-count.svg)](https://u8views.com/github/IvanMartin111)
+<p align="center">
+  <a href="https://u8views.com/github/IvanMartin111"><img src="https://u8views.com/api/v1/github/profiles/206348111/views/day-week-month-total-count.svg" alt="Iván Martín Hernández profile views"></a>
+</p>
 
 ---
 
