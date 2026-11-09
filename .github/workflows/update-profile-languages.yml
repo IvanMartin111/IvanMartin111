@@ -33,11 +33,9 @@ jobs:
         uses: lowlighter/metrics@v3.34
         with:
           token: ${{ env.METRICS_TOKEN }}
-          committer_token: ${{ secrets.GITHUB_TOKEN }}
           user: IvanMartin111
           filename: assets/statistics/languages.svg
-          output_action: commit
-          committer_message: "Update language statistics - [Skip GitHub Action]"
+          output_action: none
           base: ""
           plugin_languages: yes
           plugin_languages_indepth: yes
@@ -53,6 +51,10 @@ jobs:
             .column h3.field { font-size: 1.25rem !important; }
           config_timezone: Europe/Madrid
 
+      - name: Copy generated language statistics
+        if: ${{ env.METRICS_TOKEN != '' }}
+        run: cp /metrics_renders/assets/statistics/languages.svg assets/statistics/languages.svg
+
       - name: Generate monthly authored commit chart
         if: ${{ env.METRICS_TOKEN != '' }}
         env:
@@ -64,9 +66,10 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/statistics/activity.svg
+          git add assets/statistics/activity.svg assets/statistics/languages.svg
           if ! git diff --cached --quiet; then
-            git commit -m "Update monthly commit chart - [Skip GitHub Action]"
+            git commit -m "Update profile statistics - [Skip GitHub Action]"
+            git pull --rebase origin main
             git push
           fi
 

@@ -25,8 +25,6 @@
   <img src="./assets/statistics/languages.svg" alt="Most used languages in source changes authored across my own repositories and repositories I contribute to" width="49%">
 </p>
 
-<p align="center"><sub>Monthly counts aggregate commits attributed to my account across my own repositories and AbRaCD/RCD. Repository names are not displayed.</sub></p>
-
 [![Iván Martín Hernández profile views](https://u8views.com/api/v1/github/profiles/206348111/views/day-week-month-total-count.svg)](https://u8views.com/github/IvanMartin111)
 
 ---
