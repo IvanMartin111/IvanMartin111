@@ -39,10 +39,28 @@ jobs:
           plugin_languages_indepth: yes
           plugin_languages_indepth_custom: chaconlab/AbRaCD,chaconlab/RCD
           plugin_languages_sections: most-used
-          plugin_languages_details: lines, percentage
+          plugin_languages_details: percentage
           plugin_languages_limit: 6
           plugin_languages_analysis_timeout: 15
           plugin_languages_analysis_timeout_repositories: 7.5
+          extras_css: |
+            .items-wrapper > section:first-child { display: none !important; }
+            .column > small { display: none !important; }
+          config_timezone: Europe/Madrid
+
+      - name: Generate contribution calendar
+        if: ${{ env.METRICS_TOKEN != '' }}
+        uses: lowlighter/metrics@v3.34
+        with:
+          token: ${{ env.METRICS_TOKEN }}
+          committer_token: ${{ secrets.GITHUB_TOKEN }}
+          user: IvanMartin111
+          filename: assets/statistics/activity.svg
+          output_action: commit
+          committer_message: "Update contribution calendar - [Skip GitHub Action]"
+          base: ""
+          plugin_calendar: yes
+          plugin_calendar_limit: 1
           config_timezone: Europe/Madrid
 
       - name: Explain missing token

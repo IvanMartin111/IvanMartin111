@@ -2,10 +2,10 @@
 
 # Iván Martín Hernández
 
-**Computational scientist · Structural Bioinformatics**
+## Computational scientist · Structural Bioinformatics
 
 <a href="./documents/cv/Ivan_Martin_Hernandez_cen.pdf"><img src="https://img.shields.io/badge/CV-View%20PDF-3D566E?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="View CV PDF"></a>
-<a href="https://www.linkedin.com/in/imartinhernandez/"><img src="https://img.shields.io/badge/LinkedIn-Profile-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn profile"></a>
+[![LinkedIn profile](https://img.shields.io/badge/LinkedIn-Profile-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/imartinhernandez/)
 <a href="https://orcid.org/0000-0003-4127-6604"><img src="https://img.shields.io/badge/ORCID-0000--0003--4127--6604-A6CE39?style=for-the-badge&logo=orcid&logoColor=white" alt="ORCID profile"></a>
 <a href="https://scholar.google.es/citations?user=qh2E8BAAAAAJ&hl=es&oi=ao"><img src="https://img.shields.io/badge/Google%20Scholar-Profile-4285F4?style=for-the-badge&logo=googlescholar&logoColor=white" alt="Google Scholar profile"></a>
 
@@ -21,16 +21,9 @@
 ## 📊 GitHub activity
 
 <p align="center">
-  <a href="https://github.com/IvanMartin111">
-    <img src="https://github-readme-activity-graph.vercel.app/graph?username=IvanMartin111&bg_color=ffffff&color=3D566E&line=167D8D&point=167D8D&area=true&hide_border=true&custom_title=GitHub%20activity%20%28last%2031%20days%29" alt="GitHub activity during the last 31 days" width="100%">
-  </a>
+  <img src="./assets/statistics/activity.svg" alt="GitHub contribution calendar for the current year" width="49%">
+  <img src="./assets/statistics/languages.svg" alt="Most used languages in source changes authored across my own repositories and repositories I contribute to" width="49%">
 </p>
-
-<p align="center">
-  <img src="./assets/statistics/languages.svg" alt="Languages in source changes authored across my own repositories and repositories I contribute to" width="80%">
-</p>
-
-<p align="center"><sub>Languages are analyzed from changes authored in my repositories and in AbRaCD and RCD. Private repositories contribute only to the aggregate language totals; no private repository names or code are displayed.</sub></p>
 
 ---
 
