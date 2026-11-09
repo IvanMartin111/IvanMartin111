@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">AbRaCD</title>
+  <desc id="desc">AntiBody Random Coordinate Descent. Sampling-based method for predicting antibody complementarity-determining region CDR loop structures. chaconlab.</desc>
+  <rect x="8" y="8" width="624" height="344" rx="22" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+  <path d="M30 9h14v342H30a22 22 0 0 1-22-22V31A22 22 0 0 1 30 9Z" fill="#167D8D"/>
+  <text x="66" y="94" fill="#0F172A" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="700">AbRaCD</text>
+  <text x="66" y="142" fill="#167D8D" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="600">AntiBody Random Coordinate Descent</text>
+  <text x="66" y="205" fill="#475569" font-family="Arial, Helvetica, sans-serif" font-size="18">Sampling-based method for predicting antibody</text>
+  <text x="66" y="234" fill="#475569" font-family="Arial, Helvetica, sans-serif" font-size="18">complementarity-determining region (CDR)</text>
+  <text x="66" y="263" fill="#475569" font-family="Arial, Helvetica, sans-serif" font-size="18">loop structures</text>
+  <line x1="66" y1="294" x2="574" y2="294" stroke="#E2E8F0" stroke-width="2"/>
+  <text x="66" y="324" fill="#64748B" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="600">chaconlab</text>
+</svg>
