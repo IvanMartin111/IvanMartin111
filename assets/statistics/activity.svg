@@ -13,14 +13,14 @@
 <text class="month" x="332.5" y="174" text-anchor="middle">May 26</text>
 <text class="month" x="387.5" y="174" text-anchor="middle">Jun 26</text>
 <text class="month" x="442.5" y="174" text-anchor="middle">Jul 26</text>
-<rect class="bar" x="483.0" y="128.2" width="29.0" height="16.8" rx="2"/>
-<text class="value" x="497.5" y="123.2" text-anchor="middle">5</text>
+<rect class="bar" x="483.0" y="130.4" width="29.0" height="14.6" rx="2"/>
+<text class="value" x="497.5" y="125.4" text-anchor="middle">5</text>
 <text class="month" x="497.5" y="174" text-anchor="middle">Aug 26</text>
-<rect class="bar" x="538.0" y="128.2" width="29.0" height="16.8" rx="2"/>
-<text class="value" x="552.5" y="123.2" text-anchor="middle">5</text>
+<rect class="bar" x="538.0" y="130.4" width="29.0" height="14.6" rx="2"/>
+<text class="value" x="552.5" y="125.4" text-anchor="middle">5</text>
 <text class="month" x="552.5" y="174" text-anchor="middle">Sep 26</text>
 <text class="month" x="607.5" y="174" text-anchor="middle">Oct 26</text>
 <rect class="bar" x="648.0" y="78.0" width="29.0" height="67.0" rx="2"/>
-<text class="value" x="662.5" y="73.0" text-anchor="middle">20</text>
+<text class="value" x="662.5" y="73.0" text-anchor="middle">23</text>
 <text class="month" x="662.5" y="174" text-anchor="middle">Nov 26</text>
 </svg>
